@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Prufer Decoder</title>
+    <meta name="description" content="Create unique trees by entering a string of numbers and using the prufer code in reverse!">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <span id="info" onclick="hideInstructions()">
+            <p class="title">Pr&uuml;fer Codes:</p>
+            <p class="desc"> For every labelled tree there is exactly one unique string of numbers, this is called the Pr&uuml;fer code of that tree. This program reverses that process and finds the unique tree for any given string of numbers. Enter a Pr&uuml;fer code below and see for yourself! (click to hide this message)</p>
+        </span>
+        <div class="innerContainer">
+            <input type="text" id="code" placeholder="1234 or 1,4,7 or 1 3 2 3" onkeydown="if(event.keyCode == 13){prufer(); return false;}" autofocus>
+            <input type="button" onclick="prufer()" class="btn" value="Go!">
+        </div>
+        <span id="error">Error: Enter a number with no 0's and each digit lower than the length of the number + 2.</span>
+    </div>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
